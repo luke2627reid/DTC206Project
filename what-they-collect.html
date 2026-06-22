@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What They Collect — Data & You</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Data <span>&</span> You</a>
+      <button class="nav__toggle" aria-label="Toggle navigation"
+        onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-they-collect.html" class="active">What They Collect</a></li>
+        <li><a href="take-control.html">Take Control</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+       PAGE HEADER
+       ===================================================== -->
+  <header class="page-header">
+    <div class="page-header__inner">
+      <span class="eyebrow">The Full Picture</span>
+      <h1>What They Collect</h1>
+      <p>Big tech companies collect far more data than most people realize. A review of their privacy policies by Security.org found dramatic differences between companies — from Google's sweeping collection across every category, to Apple's comparatively minimal approach. Here is what each company actually collects about you.</p>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       INFOGRAPHIC 1: DATA COLLECTION COMPARISON TABLE
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <div style="margin-bottom:2rem;">
+        <span class="eyebrow">Infographic 1</span>
+        <h2 class="section-title">Data Collection Comparison</h2>
+        <p class="section-lead">Which categories of data does each major tech company collect? Based on a review of each company's official privacy policy by Security.org (Petrino, 2026).</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="comparison-table" aria-label="Data collection comparison across major tech companies">
+          <thead>
+            <tr>
+              <th scope="col">Data Category</th>
+              <th scope="col">
+                <div class="th-company">
+                  Google
+                  <span class="grade grade--f">F</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div class="th-company">
+                  Meta
+                  <span class="grade grade--d">D</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div class="th-company">
+                  Apple
+                  <span class="grade grade--a">A+</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div class="th-company">
+                  Microsoft
+                  <span class="grade grade--b">B</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div class="th-company">
+                  TikTok
+                  <span class="grade grade--d">D</span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Location Data</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Browsing History</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Search Queries</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td>
+                <div class="check-note">
+                  <span class="check">✓</span>
+                  <span>not linked to ID</span>
+                </div>
+              </td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Email Content</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Voice &amp; Audio</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Photos &amp; Metadata</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Purchase History</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Private Messages</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Third-Party Tracking</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Device Identifiers</td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Payment Info</td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Contact List</td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Face / Biometric Data</td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-caption">
+        <strong style="color:var(--white);">Source:</strong> Petrino, Gene. "The Data Big Tech Companies Have On You." Security.org, Jan. 12, 2026. Data reflects each company's stated privacy policy as of that date. Apple's search query collection is noted separately as the company does not link search terms to a user's IP address or identity.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       COMPANY CARDS
+       ===================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="company-cards">
+
+        <!-- ─── GOOGLE ─────────────────────────────────── -->
+        <article class="company-card">
+          <div class="company-card__header">
+            <h3 class="company-card__name">Google</h3>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Privacy Grade</span>
+              <span class="grade grade--f">F</span>
+            </div>
+          </div>
+          <div class="company-card__body">
+            <div class="company-card__section">
+              <h4>What They Collect</h4>
+              <p>Search terms, browsing history, location via GPS and nearby Bluetooth/WiFi devices, emails you write and receive, videos watched, voice commands, photos and metadata, activity on third-party sites and apps, purchase history, device identifiers, IP address.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Why They Collect It</h4>
+              <p>Google's entire business model is built on advertising. By collecting your data, they offer more targeted and effective ad opportunities to their customers.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Consequences</h4>
+              <p>Your data is shared with advertisers, publishers, and developers. If you use Gmail for work or school, your domain administrator also has access to your information.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ─── META ───────────────────────────────────── -->
+        <article class="company-card">
+          <div class="company-card__header">
+            <h3 class="company-card__name">Meta (Facebook / Instagram)</h3>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Privacy Grade</span>
+              <span class="grade grade--d">D</span>
+            </div>
+          </div>
+          <div class="company-card__body">
+            <div class="company-card__section">
+              <h4>What They Collect</h4>
+              <p>Name, phone number, payment info, private messages, photos and metadata, contact info from your device, exactly when you log in and for how long, every comment/share/transaction, activity on third-party websites via cookies.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Why They Collect It</h4>
+              <p>Meta makes the majority of its revenue through targeted advertising — the more it knows about you, the more it can charge advertisers.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Consequences</h4>
+              <p>Meta tracks you on websites outside of Facebook and Instagram through embedded tracking pixels. Even if you've never posted anything sensitive, your behavior patterns create a detailed profile used to influence what you see and buy. This is the same tracking method Consumer Reports found TikTok uses to follow people who don't even have a TikTok account.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ─── APPLE ───────────────────────────────────── -->
+        <article class="company-card">
+          <div class="company-card__header">
+            <h3 class="company-card__name">Apple</h3>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Privacy Grade</span>
+              <span class="grade grade--a">A+</span>
+            </div>
+          </div>
+          <div class="company-card__body">
+            <div class="company-card__section">
+              <h4>What They Collect</h4>
+              <p>Name, email, phone number, payment info, IP address, device type, search terms (not linked to your IP), time and duration of activity.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Why They Collect It</h4>
+              <p>Apple collects minimal data because their business model is selling hardware and software — not advertising.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Consequences</h4>
+              <p>Apple is the only company reviewed that does not share your personal data with third parties for marketing purposes, and does not source your information from publicly accessible sources.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ─── MICROSOFT ──────────────────────────────── -->
+        <article class="company-card">
+          <div class="company-card__header">
+            <h3 class="company-card__name">Microsoft</h3>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Privacy Grade</span>
+              <span class="grade grade--b">B</span>
+            </div>
+          </div>
+          <div class="company-card__body">
+            <div class="company-card__section">
+              <h4>What They Collect</h4>
+              <p>Name, email, browsing history (via Edge/Bing), location, device identifiers, search queries, purchase history, voice data if Cortana is used.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Why They Collect It</h4>
+              <p>Microsoft uses data to personalize services and power its advertising business across Bing, LinkedIn, and other platforms.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Consequences</h4>
+              <p>Data collected across Microsoft services can be linked together — your LinkedIn activity, Bing searches, and Office usage may all feed into one profile.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ─── TIKTOK ──────────────────────────────────── -->
+        <article class="company-card">
+          <div class="company-card__header">
+            <h3 class="company-card__name">TikTok</h3>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Privacy Grade</span>
+              <span class="grade grade--d">D</span>
+            </div>
+          </div>
+          <div class="company-card__body">
+            <div class="company-card__section">
+              <h4>What They Collect</h4>
+              <p>Location, device identifiers, browsing history on other websites via tracking pixels, face and voice data from videos, contacts, clipboard content, and keystroke patterns.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Why They Collect It</h4>
+              <p>TikTok's algorithm depends on granular data to power its recommendation engine and ad targeting.</p>
+            </div>
+            <div class="company-card__section">
+              <h4>Consequences</h4>
+              <p>According to Consumer Reports, TikTok tracks people across the web even if they don't have a TikTok account, through invisible tracking pixels embedded in other websites.</p>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.company-cards -->
+    </div>
+  </section>
+
+  <!-- =====================================================
+       THE BOTTOM LINE
+       ===================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">The Bottom Line</span>
+      <h2 class="section-title" style="margin-bottom:1.5rem;">Your Data Is the Product</h2>
+      <div class="highlight-box">
+        <p>
+          The common thread across all of these companies is that your data is the product. Even when a service is free, you are paying with your personal information. Understanding what is collected is the first step to taking back control.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       CTA
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Ready to do something about it?</h2>
+        <p>Use the official tools from each company to download your data, review what they know, and limit what they collect going forward.</p>
+        <a href="take-control.html" class="btn btn--teal">Take Control of Your Data →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">Created for DTC 206 — Digital Inclusion Project</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-they-collect.html">What They Collect</a></li>
+        <li><a href="take-control.html">Take Control</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Take Control — Data & You</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Data <span>&</span> You</a>
+      <button class="nav__toggle" aria-label="Toggle navigation"
+        onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-they-collect.html">What They Collect</a></li>
+        <li><a href="take-control.html" class="active">Take Control</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+       PAGE HEADER
+       ===================================================== -->
+  <header class="page-header">
+    <div class="page-header__inner">
+      <span class="eyebrow">Your Action Plan</span>
+      <h1>Take Control</h1>
+      <p>You can't stop companies from having privacy policies, but you can limit what they collect and see exactly what they already have. Here are the official tools from each company — use them.</p>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       STEP-BY-STEP GUIDES
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="guide-cards">
+
+        <!-- ─── GOOGLE ─────────────────────────────────── -->
+        <article class="guide-card">
+          <div class="guide-card__header">
+            <h3>Google</h3>
+            <div class="guide-card__tools">
+              <a href="https://takeout.google.com" target="_blank" rel="noopener" class="btn btn--teal btn--sm">Google Takeout ↗</a>
+              <a href="https://myaccount.google.com/intro/privacycheckup" target="_blank" rel="noopener" class="btn btn--outline btn--sm">Privacy Checkup ↗</a>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>Go to <strong>takeout.google.com</strong> and sign in with your Google account.</li>
+            <li>Select which Google services you want to see data from — Gmail, Maps, Search, YouTube, and more.</li>
+            <li>Download your archive. You may be surprised how much is there.</li>
+            <li>Visit the Privacy Checkup link to adjust what Google saves about you going forward, including Location History, Web &amp; App Activity, and ad personalization.</li>
+          </ol>
+        </article>
+
+        <!-- ─── APPLE ──────────────────────────────────── -->
+        <article class="guide-card">
+          <div class="guide-card__header">
+            <h3>Apple</h3>
+            <div class="guide-card__tools">
+              <a href="https://privacy.apple.com" target="_blank" rel="noopener" class="btn btn--teal btn--sm">Apple Data & Privacy ↗</a>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>Go to <strong>privacy.apple.com</strong> and sign in with your Apple ID.</li>
+            <li>Select "Get a copy of your data."</li>
+            <li>Choose which data categories to include — App Store activity, Apple Pay, iCloud, and more — and submit your request.</li>
+            <li>Apple will email you within 7 days when your download is ready.</li>
+          </ol>
+        </article>
+
+        <!-- ─── META ───────────────────────────────────── -->
+        <article class="guide-card">
+          <div class="guide-card__header">
+            <h3>Meta (Facebook / Instagram)</h3>
+            <div class="guide-card__tools">
+              <a href="https://www.facebook.com/privacy/center/" target="_blank" rel="noopener" class="btn btn--teal btn--sm">Meta Privacy Center ↗</a>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>Go to <strong>facebook.com/privacy/center</strong> and sign in.</li>
+            <li>Use the Privacy Checkup tool to review who sees your posts and personal info.</li>
+            <li>Go to Settings → Your Facebook Information → Download Your Information to get a copy of your data.</li>
+            <li>Review which apps have access to your account and revoke any you don't recognize.</li>
+          </ol>
+        </article>
+
+        <!-- ─── MICROSOFT ──────────────────────────────── -->
+        <article class="guide-card">
+          <div class="guide-card__header">
+            <h3>Microsoft</h3>
+            <div class="guide-card__tools">
+              <a href="https://account.microsoft.com/privacy" target="_blank" rel="noopener" class="btn btn--teal btn--sm">Privacy Dashboard ↗</a>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>Go to <strong>account.microsoft.com/privacy</strong> and sign in with your Microsoft account.</li>
+            <li>Review your browsing history, search history, and location activity.</li>
+            <li>Use the "Clear" options to delete categories of data you don't want Microsoft to retain.</li>
+            <li>Adjust ad settings to limit personalized advertising across Microsoft properties.</li>
+          </ol>
+        </article>
+
+        <!-- ─── TIKTOK ──────────────────────────────────── -->
+        <article class="guide-card">
+          <div class="guide-card__header">
+            <h3>TikTok</h3>
+            <div class="guide-card__tools">
+              <a href="https://support.tiktok.com/en/account-and-privacy" target="_blank" rel="noopener" class="btn btn--teal btn--sm">TikTok Privacy Settings ↗</a>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>Open TikTok and go to <strong>Profile → Menu → Settings and Privacy.</strong></li>
+            <li>Tap Privacy and review who can see your activity, likes, and following list.</li>
+            <li>Go to Ads and Data → Off-TikTok Activity to limit tracking on other websites.</li>
+            <li>Request a copy of your data from Settings → Privacy → Personalization and Data.</li>
+          </ol>
+        </article>
+
+      </div><!-- /.guide-cards -->
+    </div>
+  </section>
+
+  <!-- =====================================================
+       QUICK WINS
+       ===================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">Quick Wins</span>
+      <h2 class="section-title" style="margin-bottom:0.5rem;">Do These Right Now</h2>
+      <p class="section-lead" style="margin-bottom:2.5rem;">Five changes you can make in the next 15 minutes that meaningfully reduce how much data is being collected about you.</p>
+
+      <ul class="quick-wins" style="max-width:760px;">
+        <li>Turn off ad personalization in your Google account settings at <strong>myaccount.google.com → Data &amp; Privacy → Ad Settings.</strong></li>
+        <li>On iPhone, go to <strong>Settings → Privacy &amp; Security → Tracking</strong> and turn off "Allow Apps to Request to Track."</li>
+        <li>On Facebook, go to <strong>Settings → Off-Facebook Activity</strong> and clear your history to disconnect past activity from your profile.</li>
+        <li>On TikTok, go to <strong>Settings → Privacy → Ads and Data</strong> and opt out of personalized ads and off-TikTok activity tracking.</li>
+        <li>On any browser, install a free tracker blocker like <strong>uBlock Origin</strong> — it stops most third-party trackers before they can collect your data.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       SHARE CTA
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Share this site with someone who needs it.</h2>
+        <p>
+          Sharing knowledge about privacy is itself an act of digital inclusion. Not everyone knows these tools exist — but passing this along costs you nothing and could make a real difference.
+        </p>
+        <a href="sources.html" class="btn btn--outline">View Our Sources →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">Created for DTC 206 — Digital Inclusion Project</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-they-collect.html">What They Collect</a></li>
+        <li><a href="take-control.html">Take Control</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

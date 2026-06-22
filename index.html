@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data & You — Digital Privacy Awareness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Data <span>&</span> You</a>
+      <button class="nav__toggle" aria-label="Toggle navigation"
+        onclick="this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="what-they-collect.html">What They Collect</a></li>
+        <li><a href="take-control.html">Take Control</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
+  <section class="hero">
+    <!-- Matrix rain canvas — z-index 0 -->
+    <canvas id="matrix-bg" aria-hidden="true"></canvas>
+    <!-- Gradient overlay for text readability — z-index 0 -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <!-- Hero content — z-index 1 -->
+    <div class="hero__inner">
+      <span class="eyebrow">DTC 206 — Digital Inclusion Project</span>
+      <h1>You're being watched —<br>and you probably <em>said yes.</em></h1>
+      <p class="hero__sub">
+        Every app you open, every search you run, every video you scroll past — it's all being collected, stored, and sold. This site will show you what's happening and what you can do about it.
+      </p>
+      <a href="what-they-collect.html" class="btn btn--teal">See What They Collect →</a>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var canvas = document.getElementById('matrix-bg');
+      var ctx = canvas.getContext('2d');
+      var FONT = 12;
+
+      // Character pool: symbols + data words
+      var SYMS = ['0','1','0','1','0','1','@','#','$','%','&',
+                  'NAME','EMAIL','LOCATION','DOB','IP','SSN','PHONE'];
+
+      var cols, drops, speeds;
+
+      function setup() {
+        var hero = canvas.parentElement;
+        canvas.width  = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+
+        var mobile = window.innerWidth < 768;
+        var totalCols = Math.floor(canvas.width / FONT);
+        cols = mobile ? Math.floor(totalCols / 2) : totalCols;
+
+        drops = [];
+        speeds = [];
+        for (var i = 0; i < cols; i++) {
+          // Stagger starts so columns don't all begin at top together
+          drops[i]  = Math.floor(Math.random() * -(canvas.height / FONT));
+          speeds[i] = 1 + Math.random() * 2; // 1–3 px per frame
+        }
+      }
+
+      function draw() {
+        // Fade trail toward background color
+        ctx.fillStyle = 'rgba(13, 13, 13, 0.07)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.font = FONT + 'px monospace';
+
+        var mobile    = window.innerWidth < 768;
+        var colStep   = mobile ? FONT * 2 : FONT;
+
+        for (var i = 0; i < cols; i++) {
+          var x   = i * colStep;
+          var y   = drops[i];
+          var sym = SYMS[Math.floor(Math.random() * SYMS.length)];
+
+          // Leading character — bright red
+          ctx.fillStyle = 'rgba(255, 60, 60, 0.85)';
+          ctx.fillText(sym, x, y);
+
+          // Advance this column
+          drops[i] += speeds[i];
+
+          // Reset column to top (with random delay) once it leaves the bottom
+          if (drops[i] > canvas.height + FONT * 5 && Math.random() > 0.97) {
+            drops[i] = 0;
+          }
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      setup();
+
+      // Resize canvas when window changes
+      var resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setup, 150);
+      });
+
+      draw();
+    })();
+  </script>
+
+  <!-- =====================================================
+       WHY THIS MATTERS
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Why This Matters</span>
+      <h2 class="section-title">The Data Economy Is Built on You</h2>
+      <div class="section-lead" style="margin-bottom: 2rem;">
+        <p>
+          Most people agree to hand over personal data without realizing it. Privacy policies run dozens of pages in legal language almost nobody reads. Companies like Google, Meta, TikTok, Apple, and Microsoft collect your location, browsing history, videos watched, how long you pause on content, and in some cases your voice and face. This data is used for targeted ads, building personality profiles, and sharing with third parties.
+        </p>
+        <br>
+        <p>
+          According to Security.org, Google alone collects data across more than a dozen categories. The good news: you have more control than you think.
+        </p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       WHAT YOU'LL FIND HERE
+       ===================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="eyebrow">What You'll Find Here</span>
+        <h2 class="section-title">Three Things This Site Will Teach You</h2>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card__icon">🔍</div>
+          <h3>What They Collect</h3>
+          <p>A breakdown of exactly what each major tech company knows about you — from Google's sweeping data collection to Apple's comparatively minimal approach.</p>
+          <br>
+          <a href="what-they-collect.html" class="btn btn--outline btn--sm">Explore →</a>
+        </div>
+        <div class="card">
+          <div class="card__icon">🛡</div>
+          <h3>Take Control</h3>
+          <p>Simple step-by-step guides to downloading your data and adjusting privacy settings on every major platform. Takes less than 30 minutes total.</p>
+          <br>
+          <a href="take-control.html" class="btn btn--outline btn--sm">Get Started →</a>
+        </div>
+        <div class="card">
+          <div class="card__icon">📚</div>
+          <h3>Sources</h3>
+          <p>Every claim on this site is backed by credible research you can read yourself — from investigative journalism to official company privacy policies.</p>
+          <br>
+          <a href="sources.html" class="btn btn--outline btn--sm">View Sources →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       INFOGRAPHIC PLACEHOLDER 2
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2rem;">
+        <span class="eyebrow">By the Numbers</span>
+        <h2 class="section-title">Data Collection at a Glance</h2>
+      </div>
+
+      <figure style="max-width:560px; margin:0 auto; text-align:center;">
+        <img
+          src="infographic.png"
+          alt="Bubble chart showing market capitalization of major tech companies: Apple $3.42 trillion, Microsoft $3.05 trillion, Google $2.27 trillion, Meta $1.81 trillion, TikTok $0.84 trillion"
+          style="width:100%; border-radius:var(--radius); border:1px solid var(--border);"
+        />
+        <figcaption style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-muted);">
+          Market capitalization of the five companies reviewed on this site. These are trillion-dollar businesses — and your data is a core part of what makes them valuable. Source: Companies Market Cap.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       CTA
+       ===================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Start with the facts.</h2>
+        <p>See a side-by-side breakdown of exactly what Google, Meta, Apple, Microsoft, and TikTok collect about you — and how each one grades on privacy.</p>
+        <a href="what-they-collect.html" class="btn btn--teal">See What They Collect →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">Created for DTC 206 — Digital Inclusion Project</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-they-collect.html">What They Collect</a></li>
+        <li><a href="take-control.html">Take Control</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
