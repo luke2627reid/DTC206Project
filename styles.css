@@ -1,11 +1,6 @@
-/* ============================================================
-   IMPORT
-   ============================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* ============================================================
-   CUSTOM PROPERTIES
-   ============================================================ */
 :root {
   --bg:           #0d0d0d;
   --bg-card:      #1a1a1a;
@@ -33,9 +28,6 @@
   --glow:       0 0 12px rgba(255, 60, 60, 0.3);
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
@@ -54,9 +46,6 @@ a:hover { color: var(--white); }
 ul, ol { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* ============================================================
-   LAYOUT
-   ============================================================ */
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -66,9 +55,6 @@ img { max-width: 100%; display: block; }
 .section { padding: 5rem 0; }
 .section--alt { background: var(--bg-card); }
 
-/* ============================================================
-   TYPOGRAPHY HELPERS
-   ============================================================ */
 .eyebrow {
   display: inline-block;
   font-size: 0.72rem;
@@ -96,9 +82,6 @@ img { max-width: 100%; display: block; }
 .text-center { text-align: center; }
 .text-center .section-lead { margin-left: auto; margin-right: auto; }
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
 .nav {
   position: sticky;
   top: 0;
@@ -171,9 +154,6 @@ img { max-width: 100%; display: block; }
   transition: all var(--ease);
 }
 
-/* ============================================================
-   BUTTONS — sharp corners, red fill
-   ============================================================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -217,9 +197,6 @@ img { max-width: 100%; display: block; }
   font-size: 0.825rem;
 }
 
-/* ============================================================
-   HERO (Home page)
-   ============================================================ */
 .hero {
   min-height: calc(100vh - var(--nav-h));
   display: flex;
@@ -230,7 +207,6 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* Canvas sits behind everything */
 #matrix-bg {
   position: absolute;
   top: 0; left: 0;
@@ -239,7 +215,6 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
-/* Gradient overlay keeps text readable */
 .hero__overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -279,9 +254,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
 }
 
-/* ============================================================
-   PAGE HEADER (inner pages)
-   ============================================================ */
 .page-header {
   padding: 4.5rem 1.5rem 3.5rem;
   background: var(--bg-card);
@@ -307,9 +279,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
 }
 
-/* ============================================================
-   CARDS — Navigation / Feature cards
-   ============================================================ */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -346,9 +315,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* ============================================================
-   GRADE BADGE
-   ============================================================ */
 .grade {
   display: inline-flex;
   align-items: center;
@@ -366,9 +332,6 @@ img { max-width: 100%; display: block; }
 .grade--d  { background: rgba(245,158,11,0.15); color: var(--grade-d); border: 1px solid rgba(245,158,11,0.3); }
 .grade--f  { background: rgba(239,68,68,0.15);  color: var(--grade-f); border: 1px solid rgba(239,68,68,0.3); }
 
-/* ============================================================
-   COMPANY CARDS (What They Collect)
-   ============================================================ */
 .company-cards {
   display: flex;
   flex-direction: column;
@@ -433,9 +396,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* ============================================================
-   GUIDE CARDS (Take Control)
-   ============================================================ */
+
 .guide-cards {
   display: flex;
   flex-direction: column;
@@ -512,9 +473,6 @@ img { max-width: 100%; display: block; }
   margin-top: 2px;
 }
 
-/* ============================================================
-   QUICK WINS
-   ============================================================ */
 .quick-wins {
   list-style: none;
   display: flex;
@@ -557,9 +515,6 @@ img { max-width: 100%; display: block; }
   margin-top: 1px;
 }
 
-/* ============================================================
-   SOURCES PAGE
-   ============================================================ */
 .source-list {
   display: flex;
   flex-direction: column;
@@ -605,9 +560,6 @@ img { max-width: 100%; display: block; }
 
 .source-item__citation a:hover { color: var(--white); }
 
-/* ============================================================
-   HIGHLIGHT BOX
-   ============================================================ */
 .highlight-box {
   background: rgba(255, 60, 60, 0.05);
   border: 1px solid rgba(255, 60, 60, 0.2);
@@ -621,9 +573,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
 }
 
-/* ============================================================
-   CTA BANNER
-   ============================================================ */
 .cta-banner {
   background: var(--bg-card);
   border: 1px solid rgba(255, 60, 60, 0.25);
@@ -645,9 +594,6 @@ img { max-width: 100%; display: block; }
   margin-right: auto;
 }
 
-/* ============================================================
-   COMPARISON TABLE
-   ============================================================ */
 .table-wrap {
   overflow-x: auto;
   border-radius: var(--radius);
@@ -741,9 +687,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
 }
 
-/* ============================================================
-   INFOGRAPHIC PLACEHOLDER (kept for any remaining uses)
-   ============================================================ */
+
 .infographic-placeholder {
   border: 2px dashed rgba(255, 60, 60, 0.3);
   border-radius: var(--radius);
@@ -767,9 +711,7 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+
 .footer {
   background: #0d0d0d;
   border-top: 1px solid var(--border);
@@ -804,9 +746,7 @@ img { max-width: 100%; display: block; }
 
 .footer__links a:hover { color: var(--red); }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+
 @media (max-width: 860px) {
   .card-grid { grid-template-columns: repeat(2, 1fr); }
 
